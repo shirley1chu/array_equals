@@ -9,8 +9,9 @@ def array_equals(array1, array2)
   elsif array1.length == 0 || array2.length == 0
     return array1.length == array2.length
   else
-    array1.length.times do |i|
-      return false unless array1[i] == array2[i]
+    while i < array1.length
+      return false if array1[i] != array2[i]
+      i += i 
     end
   end
   return true
